@@ -1,0 +1,362 @@
+/* CSS File for Revolv prototype */
+body {
+    background: #DB4437;
+    width: 100%;
+    /*height: 100%;*/
+}
+
+h1,h2,h3,h4,h5,p,span,a {
+    text-shadow: 0 0.025em 0 rgba(0, 0, 0, 0.1);
+    font: 1em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 10px 0 0px 0;
+
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+h1 span {
+    font-weight:300;
+}
+
+.headline {
+    text-align:center;
+}
+
+.headline h1, .headline h4 {
+	color: #ffffff;
+	}
+
+.content {
+	background: #ffffff;
+	width: 600px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.content h2.snippettitle {
+	text-align: center;
+	}
+	
+.storytile {
+	position: relative;
+	margin: 0 auto;
+	width: 200px; 
+	height: 220px;
+	border: solid 2px #000000;
+	/*background: url('../images/oscar-background.jpg') no-repeat;*/
+	background-size: cover;
+	background-position: 50%;
+	color: #ffffff;
+}
+
+.storytile .tile-container {
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+}
+
+.storytile a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.storytile .tile-container h3.headline {
+	font-size: 14px;
+	font-weight: 300;
+	padding: 10px;
+	margin: 0;
+	text-align: left;
+}
+
+.storytile .tile-container .meta-details {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding: 5px;
+}
+
+.storytile .tile-container .meta-details p {
+	padding: 0;
+	margin: 0;
+	}
+	
+.storytile .tile-container .meta-details span, 
+.newsarticle .articleheader .meta-details span {
+	padding: 2px 0 3px 26px;
+	display: block;
+	font-weight: 100;
+}
+
+.storytile .tile-container .meta-details span.publishdate, 
+.newsarticle .articleheader .meta-details span.publishdate {
+	background-image: url('../images/clock.png');
+	background-repeat: no-repeat;
+}
+
+.storytile .tile-container .meta-details span.publisher {
+
+}
+
+.storytile .tile-container .meta-details span.publisher.the-guardian,
+ .newsarticle .articleheader .meta-details span.publisher.the-guardian {
+	background-image: url('../images/the-guardian.png');
+	background-repeat: no-repeat;
+}
+
+.storytile .voting-buttons {
+	position: absolute;
+	top: 0;
+	right: -47px;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 45px;
+	height: 95px;
+}
+
+.storytile .voting-buttons .upvote {
+	width: 30px;
+	height: 32px;
+	background-image: url('../images/upvote.png');
+	background-repeat: no-repeat;
+	margin: 5px 5px 15px 5px;
+}
+
+.storytile .voting-buttons .downvote {
+	width: 30px;
+	height: 32px;
+	background-image: url('../images/downvote.png');
+	background-repeat: no-repeat;
+	margin: 15px 5px 5px 5px;
+}
+
+
+.newsarticle {
+	margin: 0 auto;
+	width: 100%;
+	height: 800px;
+	border: solid 0px #000000;
+	color: #ffffff;
+}
+
+.newsarticle .articleheader {
+	/*background: url('../images/oscar-background.jpg') no-repeat;*/
+	background-size: cover;
+	background-position: 50%;
+	height: 150px;
+}
+
+.newsarticle .articleheader h3.headline {
+	font-size: 20px;
+	font-weight: 300;
+	padding: 0 20 0 0;
+	margin: 0;
+	text-align: left;
+}
+
+.newsarticle .articleheader .headercontainer {
+	width: 100%;
+	height: 100%;
+	/*position: absolute;*/
+	bottom: 0;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 28%, rgba(0,0,0,0.75) 99%, rgba(0,0,0,0.75) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(28%,rgba(0,0,0,0.25)), color-stop(99%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.75))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 28%,rgba(0,0,0,0.75) 99%,rgba(0,0,0,0.75) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 28%,rgba(0,0,0,0.75) 99%,rgba(0,0,0,0.75) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 28%,rgba(0,0,0,0.75) 99%,rgba(0,0,0,0.75) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 28%,rgba(0,0,0,0.75) 99%,rgba(0,0,0,0.75) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#bf000000',GradientType=0 ); /* IE6-9 */
+}
+
+.newsarticle .articleheader .meta-details {
+	padding: 40px 0 0 15px;
+}
+
+.newsarticle .articleheader .meta-details span {
+	display: inline;
+	margin-right: 25px;
+	}
+	
+.newsarticle .articleheader .meta-details .articlescore span	{
+	padding: 0;
+	margin: 0;
+}
+
+.newsarticle .articleheader .meta-details .articlescore {
+	/*float: right;*/
+}
+
+.newsarticle .articleheader .meta-details .articlescore .actualscore {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.newsarticle .articlecontent {
+	padding: 0px;
+	height: 58%;
+	width: 100%;
+	border-bottom: 0px solid #000;
+
+}
+
+.newsarticle .articlecontent .contentcontainer {
+	height: 100%;
+	width: 100%;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+div.scroll {
+    background-color: #00FFFF;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+}
+
+.newsarticle .articlecontent .contentcontainer p {
+	color: #333;
+	padding: 5px 0 10px;
+	margin: 0;
+	line-height: 24px;
+}
+
+.newsarticle .articlefooter {
+	height: inherit;
+}
+
+.newsarticle .articlefooter .footercontainer {
+	height: 50px;
+}
+
+.newsarticle .articlefooter .footercontainer .footer-downvote {
+	width: 50%;
+	/*border-right: 2px solid #000000;*/
+	float:left;
+	height: inherit;
+	background-color: #e47369;
+}
+
+.newsarticle .articlefooter .footercontainer .footer-upvote {
+	width: 50%;
+	float:left;
+	height: inherit;
+	background-color: #69e473;
+
+}
+
+.newsarticle .articlefooter .footercontainer a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 0;
+	text-decoration: none;
+
+}
+
+.newsarticle .articlefooter .footercontainer span {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 100;
+	display: block;
+	margin: 10px;
+	padding: 0 0px 0 40px;
+}
+
+.newsarticle .articlefooter .footercontainer span.downvote {
+	background-image: url('../images/downvote.png');
+	background-repeat: no-repeat;
+}
+
+.newsarticle .articlefooter .footercontainer span.upvote {
+	background-image: url('../images/upvote.png');
+	background-repeat: no-repeat;
+}
+
+.topiccircle {
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 2px solid #000;
+	width: 300px;
+	height: 300px;
+	background: url('../images/oscar-background.jpg') no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	position: relative;
+	
+}
+.topiccircle a {
+
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 0;
+	margin: 0;
+	border-radius: inherit;
+
+}
+.topiccircle .topiccontainer {
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: inherit;
+}
+
+.topiccircle .topiccontainer .topictitle {
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 70%;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-pack:center;
+	-webkit-justify-content:center;
+	-moz-justify-content:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+    
+    -webkit-flex-line-pack:center;
+	-ms-flex-line-pack:center;
+	-webkit-align-content:center;
+	align-content:center;
+    
+    -webkit-flex-direction:column;
+	-moz-flex-direction:column;
+	-ms-flex-direction:column;
+	flex-direction:column;
+    
+}
+
+.topiccircle .topiccontainer .topictitle h2 {
+	color: #fff;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+.outer {
+    height: 200px;
+    overflow: auto;
+}
+.inner {
+    /* width: 800px; */
+    height:200px;
+}

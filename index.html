@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Revolv</title>
+  <meta name="description" content=“revolv”>
+  <meta name="author" content=“Welcome to revolv”>
+
+  <link rel="stylesheet" href="css/circle.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.js"></script>
+  <script src="js/initial.js"></script>
+
+</head>
+
+<body style="height:100%">
+  
+  <script>
+    function fullscreen() {
+      launchIntoFullscreen(document.body);
+    }
+    function run(page) {
+      if (page == "start") {
+        removeElement('headline');
+        addJS("js/circle.js");
+      } 
+    }
+  </script>
+	<div id="headline" class="headline">
+     <img src="images/logo.png">
+        <br/>
+        <input class="btn btn-default btn-lg" type="button" onclick="run('start');" value="start" />
+        <h3 style="color:white;"><span>Dear user, we recommend using <span class="publisher the-guardian" style="background:url('http://icons.iconarchive.com/icons/google/chrome/64/Google-Chrome-icon.png');background-size: 20px;padding-left: 25px;padding-top: 3px;background-repeat: no-repeat;"></span>chrome to run this app.</span></h3>
+          <h5 style="color:white;">for JOUR3222/DECO3500</h5>
+
+    </div>
+    <div>
+            <div style="border-color:rgba(0,0,0,0);background-color:rgba(0,0,0,0);bottom:0;position: absolute;margin: 0 auto;padding:0px;"  class="alert alert-danger" role="alert">
+            <ul class="nav nav-pills">
+              <li class="active"><a style="background-color: #DB4437;" href="#">Alex Hall <span class="badge">Dsigner</span></a></li>
+             <li class="active"><a style="background-color: #DB4437;" href="#">Josh Gibbons <span class="badge">Consultant</span></a></li>
+             <li class="active"><a style="background-color: #DB4437;" href="#">Nick Deans <span class="badge">Testing</span></a></li>
+             <li class="active"><a style="background-color: #DB4437;" href="#">David Adcock <span class="badge">Manager</span></a></li>
+             <li class="active"><a style="background-color: #DB4437;" href="#">Weijun Lai <span class="badge">Programmer</span></a></li>
+             <li class="active"><a id="fullscreen_btn" style="background-color: #DB4437;" href="#" onclick="toggleScreen_();">Full Screen</a></li>
+            </ul>
+            </div>
+          </div>
+    
+</body>
+</html>
