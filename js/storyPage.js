@@ -197,6 +197,10 @@
     storyPageClose("back",1,1);
   }
 
+  function storyPageMoveUp(){
+    storyPageClose("back",1,-1);
+  }
+
   function voteUp() {
     voteUpNoClose();
     storyPageClose("back",1,-1);

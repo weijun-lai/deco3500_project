@@ -195,7 +195,7 @@ function run_app() {
                 .style("opacity", function (d) {
                     return (d.depth==0) ? 0 : 1;
                 })
-                storyPageMoveDown();
+                storyPageMoveUp();
             }
 
         } else if (selectedCircle.depth == 2) {
