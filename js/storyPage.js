@@ -368,7 +368,7 @@
               "name": "article",
               "headline": $('#inputHeadline').val(),
               "publisher": $('#inputPublisher').val(),
-              "publisherimage": $('#inputPublisherimage'),
+              "publisherimage": $('#inputPublisherimage').val(),
               "publishdate": $('#datetimepicker').val(),
               "voteUpScore": "0",
               "voteDownScore": "0",
