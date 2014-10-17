@@ -4,6 +4,7 @@ var k = 1;
 var n=1;
 var circle = null;
 var data_json = null;
+var data_user_json = null;
 var selectedCircle = null;
 var foreignObjects_g = null;
 var node = null;
@@ -18,6 +19,7 @@ var transform = ["", "-webkit-", "-moz-", "-ms-", "-o-"].reduce(function (p, v) 
 
 
 load_data("data/data.json");
+load_data_user("data/user.json");
 
 function load_data(datafile) {
 
@@ -30,6 +32,17 @@ function load_data(datafile) {
             nodes = pack.nodes(root),
             view;
         run_app();
+    });
+}
+
+function load_data_user(datafile){
+    d3.json(datafile, function (error, data) {
+        if (error) return console.error(error);
+        data_user_json = data;
+        console.log("data_user_json ",data_user_json);
+        // for (var user in data_user_json.username) {
+        //     console.log(user);
+        // }
     });
 }
 

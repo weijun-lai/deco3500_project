@@ -1,7 +1,9 @@
 var ProfileName = "DECO3500",
+UserLevel = "Ultimate";
 VoteCase = 0,
 LinksContributed = 0,
-TopticAdded = 0;
+TopticAdded = 0
+loginState = false;
 
 var user_profile = null;
 
@@ -40,10 +42,23 @@ var button_fullscreen = userpanel
 
 toggle_screen? button_fullscreen.attr("value","Fullscreen"):button_fullscreen.attr("value","ExitFullScreen");
 
+var button_login = userpanel
+.append("div")
+.append("input")
+.attr("class","btn btn-primary")
+.attr("type","button")
+.attr("value","Login")
+.attr("id","LoginBtn")
+.style("position","absolute")
+.style("top","120px")
+.style("left","50%")
+.style("z-index","1")
+.attr("onclick","loginBodyHTML();")
+
 var user_profile = userpanel
 .append("div")
 .style("position","absolute")
-.style("top","120px")
+.style("top","160px")
 // .style("width","380px")
 .style("display","table")
 .append("ul")
@@ -73,7 +88,7 @@ function addUserPanel() {
 	user_profile = userpanel
 	.append("div")
 	.style("position","absolute")
-	.style("top","120px")
+	.style("top","160px")
 	.style("display","table")
 	.append("ul")
 	.attr("class","nav nav-pills nav-stacked")
@@ -88,7 +103,7 @@ function addUserPanel() {
 	.append("li")
 	.append("span")
 	.attr("class","glyphicon glyphicon-user badge pull-left")
-	.text("UserLevel: Ultimate")
+	.text("UserLevel: "+UserLevel)
 
 	user_profile
 	.append("li")
@@ -122,3 +137,16 @@ function addUserPanel() {
 
 }
 
+function updateUserpanel() {
+	user_profile.remove();
+
+	user_profile = userpanel
+.append("div")
+.style("position","absolute")
+.style("top","160px")
+// .style("width","380px")
+.style("display","table")
+.append("ul")
+.attr("class","nav nav-pills nav-stacked");
+addUserPanel();
+}

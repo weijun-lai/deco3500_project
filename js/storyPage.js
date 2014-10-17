@@ -293,38 +293,97 @@
     storyPageOpen();
   }
 
-  function addNewStory() {
-        clearAll();
-    var newChildren = {
-    "name":"AAAEbola Outbreak",
-    "backgroundimage":"images/oscar-background.jpg",
-    "children": [
-            {
-              "name": "article",
-              "headline": "hahaha",
-              "publisher": "AFL",
-              "publisherimage": "http://www.afl.com.au/static-resources/favicon/afl.ico",
-              "publishdate": " September 7, 2014 5:54 PM",
-              "voteUpScore": "39",
-              "voteDownScore": "0",
-              "backgroundimage": "http://www.afl.com.au/staticfile/AFL%20Tenant/AFL/Files/Images/0709_FinalsRoad_Graphic_2.jpg",
-              "bodyHTML": "",
-              "size": 1
-            }
-        ]
-    };
-
-    var counter = 0;
-    for (var children_ in root.children) {
-        if (root.children[children_].name == newChildren.name) {
-            counter++;
-            for (var newChild in newChildren.children) {
-            root.children[children_].children.push(newChildren.children[newChild]);
-            }
-        }
+  function loginBodyHTML() {
+    footercontainer.style("opacity",0);
+    story_page_detail_svg
+    .attr("height", (diameter-diameter*0.35)+"px")
+    story_page_detail_articlecontent
+    .style("height",(diameter-diameter*0.35)+"px")
+    .style("position","fixed")
+    .style("opacity",1);
+    story_page_detail_tile_articleheader.style("height","0px")
+    footercontainer.style("visibility","hidden")
+    articleBodyHTML = loginHTML;
+    storyPageOpen();
+    if (loginState) {
+      loginState = false;
+      logoff();
     }
-    counter==0? root.children.push(newChildren):counter=counter;
-    run_app();
+  }
+
+  function login() {
+    // alert($('#Username').val(),$('#Password').val());
+    // console.log($('#Username').val(),$('#Password').val());
+    //$('#info_label').text():$('#info_label').text();$('#Username').val()+" "+$('#Password').val());
+    
+    if (check_login()){
+      loginState = true;
+      $('#info_label').text("Login success.");
+      button_login.attr("value","Logoff");
+      storyPageMoveUp();
+    } else {
+      loginState = false;
+      $('#info_label').text("Login Failure. Tips:Username:demo,Passwd:123456");
+     logoff();
+    }
+    
+  }
+
+  function check_login(){
+    var username = $('#Username').val();
+    var password = $('#Password').val();
+      console.log("data_user_json ",data_user_json);
+    for (var user in data_user_json.users) {
+      // console.log(user,data_user_json.username[user].passwd,data_user_json.username[user].level);
+      
+      if (data_user_json.users[user].username == username &&
+        password == data_user_json.users[user].passwd
+        ) {
+        ProfileName = username;
+        VoteCase = data_user_json.users[user].VoteCase;
+        LinksContributed = data_user_json.users[user].LinksContributed;
+        TopticAdded =data_user_json.users[user].TopticAdded;
+        UserLevel = data_user_json.users[user].level;
+        updateUserpanel();
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function logoff(){
+     button_login.attr("value","Login");
+      ProfileName = "NoAccount";
+        VoteCase = 0;
+        LinksContributed = 0;
+        TopticAdded =0;
+        UserLevel = 0;
+        updateUserpanel();
+  }
+
+  function sigin_newuser(){
+    var username = $('#Username').val();
+    var password = $('#Password').val();
+    console.log(username,password);
+      
+    if (!check_login() && username.length>0 && password.length>0) {
+      var newChildren = 
+              {
+                "username":username,
+                "passwd": password,
+                "level": "Newly",
+                "VoteCase": "0",
+                "LinksContributed":"0",
+                "TopticAdded": "0"
+              };
+      console.log("newChildren ",newChildren);
+      data_user_json.users.push(newChildren);
+      console.log("data_user_json ",data_user_json.users);
+      $('#info_label').text("NewUser:"+username+" signin success. You could login now.");
+    } else {
+      $('#info_label').text("Signin Failure.");
+    }
+
   }
 
   function sumbitStory() {

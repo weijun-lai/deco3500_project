@@ -1,0 +1,53 @@
+{
+  "users": [ 
+    {"username":"demo",
+      "level": "Newly",
+      "VoteCase": "0",
+      "LinksContributed": "0",
+      "TopticAdded": "0",
+      "passwd": "123456"
+    },
+    {"username":"demo1",
+      "level": "Newly",
+      "VoteCase": "0",
+      "LinksContributed": "0",
+      "TopticAdded": "0",
+      "passwd": "123456"
+    },
+    {"username":"demo2",
+      "level": "Frequent",
+      "VoteCase": "0",
+      "LinksContributed": "0",
+      "TopticAdded": "0",
+      "passwd": "123456"
+    },
+    {"username":"demo3",
+      "level": "Power",
+      "VoteCase": "0",
+      "LinksContributed": "0",
+      "TopticAdded": "0",
+      "passwd": "123456"
+    },
+    {"username":"demo4",
+      "level": "Ultimate",
+      "VoteCase": "0",
+      "LinksContributed": "0",
+      "TopticAdded": "0",
+      "passwd": "123456"
+    },
+    {"username":"deco3500",
+      "level": "Ultimate",
+      "VoteCase": "4946",
+      "LinksContributed": "49",
+      "TopticAdded": "10",
+      "passwd": "123456"
+    },
+    {"username":"jour3222",
+      "level": "Ultimate",
+      "VoteCase": "0",
+      "LinksContributed": "0",
+      "TopticAdded": "0",
+      "passwd": "123456"
+    }
+  ]
+}
