@@ -1,9 +1,7 @@
 var ProfileName = "DECO3500",
-UserLevel = "Ultimate";
 VoteCase = 0,
 LinksContributed = 0,
-TopticAdded = 0
-loginState = false;
+TopticAdded = 0;
 
 var user_profile = null;
 
@@ -40,31 +38,27 @@ var button_fullscreen = userpanel
 .style("z-index","1")
 .attr("onclick","toggleScreen();")
 
-toggle_screen? button_fullscreen.attr("value","Fullscreen"):button_fullscreen.attr("value","ExitFullScreen");
-
-var button_login = userpanel
-.append("div")
-.append("input")
-.attr("class","btn btn-primary")
-.attr("type","button")
-.attr("value","Login")
-.attr("id","LoginBtn")
-.style("position","absolute")
-.style("top","120px")
-.style("left","50%")
-.style("z-index","1")
-.attr("onclick","loginBodyHTML();")
-
+// var button_fullscreen = userpanel
+// .append("div")
+// .append("input")
+// .attr("class","btn btn-primary")
+// .attr("type","button")
+// .attr("value","Exitscreen")
+// .style("position","absolute")
+// .style("top","120px")
+// // .style("left",winWidth/2+"px")
+// .style("z-index","1")
+// .attr("onclick","exitFullscreen();")
 var user_profile = userpanel
 .append("div")
 .style("position","absolute")
-.style("top","160px")
+.style("top","120px")
 // .style("width","380px")
 .style("display","table")
 .append("ul")
 .attr("class","nav nav-pills nav-stacked")
 
-// var toggle_screen = true;
+var toggle_screen = true;
 function toggleScreen(){
 	if (toggle_screen) {
 		launchIntoFullscreen(document.body);
@@ -88,65 +82,61 @@ function addUserPanel() {
 	user_profile = userpanel
 	.append("div")
 	.style("position","absolute")
-	.style("top","160px")
+	.style("top","120px")
+	// .style("width","380px")
 	.style("display","table")
 	.append("ul")
 	.attr("class","nav nav-pills nav-stacked")
 
 	user_profile
 	.append("li")
+	// .append("a").attr("href","#")
 	.append("span")
 	.attr("class","glyphicon glyphicon-user badge pull-left")
 	.text("ProfileName: "+ProfileName)
 
 	user_profile
 	.append("li")
+	// .attr("class","active")
+	// .append("a").attr("href","#")
 	.append("span")
 	.attr("class","glyphicon glyphicon-user badge pull-left")
-	.text("UserLevel: "+UserLevel)
+	.text("UserLevel: Ultimate")
 
 	user_profile
 	.append("li")
+	// .append("a").attr("href","#")
 	.append("span")
 	.attr("class","glyphicon glyphicon-pencil badge pull-left")
 	.text("EditProfile")
 
 	user_profile
 	.append("li")
+	// .append("a").attr("href","#")
 	.append("span")
 	.attr("class","glyphicon glyphicon-cog badge pull-left")
 	.text("Setting")
 
 	user_profile
 	.append("li")
+	// .append("a").attr("href","#")
 	.append("span")
 	.attr("class","glyphicon glyphicon-hand-up badge pull-left")
 	.text("VoteCase: "+VoteCase)
 
 	user_profile
 	.append("li")
+	// .append("a").attr("href","#")
 	.append("span")
 	.attr("class","glyphicon glyphicon-paperclip badge pull-left")
 	.text("LinksContributed: "+LinksContributed)
 
 	user_profile
 	.append("li")
+	// .append("a").attr("href","#")
 	.append("span")
 	.attr("class","glyphicon glyphicon-plus-sign badge pull-left")
 	.text("TopticAdded: "+TopticAdded)
 
 }
 
-function updateUserpanel() {
-	user_profile.remove();
-
-	user_profile = userpanel
-.append("div")
-.style("position","absolute")
-.style("top","160px")
-// .style("width","380px")
-.style("display","table")
-.append("ul")
-.attr("class","nav nav-pills nav-stacked");
-addUserPanel();
-}
