@@ -119,4 +119,14 @@ function exitFullscreen() {
 
 // Cancel fullscreen for browsers that support it!
 // exitFullscreen();
-
+var toggle_screen = true;
+function toggleScreen_(){
+  if (toggle_screen) {
+    launchIntoFullscreen(document.body);
+    $('#fullscreen_btn').text("ExitFullScreen");
+  } else {
+    exitFullscreen();
+    $('#fullscreen_btn').text("FullScreen");
+  }
+  toggle_screen ^= true;
+}
